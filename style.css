@@ -79,18 +79,24 @@ main .planets h2 {
 }
 
 section {
-    
     padding-top: 80px;
 }
 section > form {
-    width: 350px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    width: 350px;
+    
     
 }
 
+section .stars {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 section h2 {
     color: #B52184;
     font-weight: 900;
@@ -102,7 +108,22 @@ section .input-wrapper input, textarea {
     border-radius: 5px;
     padding: 10px;
 }
-
+section .input-wrapper input {
+    text-indent: 20px;
+}
+section .input-wrapper input::placeholder {
+    text-indent: 20px;
+}
+section .input-wrapper .submit-button {
+    text-indent: 0px;
+}
+section .input-wrapper {
+    position: relative;
+}
+section .input-wrapper #user-icon {
+    position: absolute;
+    transform: translate(4px, 7px);
+}
 section textarea {
     height: 125px;
 }
@@ -116,6 +137,7 @@ section > form .submit-button {
 section > form .submit-button:hover {
     background-color: #3835a2;
 }
+
 
 footer {
     background-color: #343193;
@@ -170,5 +192,31 @@ footer p {
         
         width: 300px;
 
+    }
+
+    section {
+        padding: 0px 0px 0px 80px;
+        display: grid;
+        grid-template-areas: 
+        "A C"
+        ;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    .form {
+        grid-area: A;
+        width: 500px;
+        margin: 0px;
+    }
+    section .stars {
+        grid-area: C;
+        opacity: 1;
+        height: fit-content;
+        
+        width: fit-content; 
+    }
+
+    footer {
+        text-align: center;
     }
 }
