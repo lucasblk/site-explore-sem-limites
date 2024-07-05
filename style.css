@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    color: #312D64;
+}
+
+
+header {
+    display: grid;
+    grid-template-areas: 
+    "A"
+    "B"
+    "C"
+    ;
+}
+
+
+.app header .astro {
+    margin: auto;
+    grid-area: A;
+    max-width: 360px;
+    
+    
+}
+
+.app header .seila {
+    grid-area: B;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.app header h1 {
+    color: #B52184;
+    font-weight: 900;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.app header p {
+    padding-bottom: 35px;
+    font-weight: 600;
+}
+
+main {
+    background-color: #343193;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    
+}
+
+main .planets {
+    margin: auto;
+    padding-top: 26px;
+    padding-left: 26px;
+    margin-block: 50px;
+    background-color: white;
+    border-radius: 20px;
+    width: 350px;
+}
+main .planets img {
+    padding-bottom: 15px;
+}
+main .planets .planets-description p{
+    width: 265px;
+    height: 170px;
+    text-align: left;
+    font-weight: 600;
+}
+main .planets .planets-description h2 {
+    color: #B52184;
+    font-weight: 900;
+
+}
+
+section {
+    
+    padding-top: 80px;
+}
+section > form {
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+section h2 {
+    color: #B52184;
+    font-weight: 900;
+}
+
+section .input-wrapper input, textarea {
+    border: 1px solid #343193;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+section textarea {
+    height: 125px;
+}
+
+section > form .submit-button {
+    color: white;
+    background-color: #242265;
+    width: 150px;
+    margin-bottom: 60px;
+}
+section > form .submit-button:hover {
+    background-color: #3835a2;
+}
+
+footer {
+    background-color: #343193;
+}
+
+footer p {
+    color: white;
+    padding: 30px 0px;
+}
+
+@media (min-width: 700px) {
+    header {
+        height: 700px;
+        display: grid;
+        grid-template-areas: 
+        "B A"
+        ;
+        gap: 10px;
+        align-content: space-between;
+        justify-content: start;
+        align-items: end;
+    }
+    header .astro {
+        grid-area: A;
+        max-width: 700px;
+        border: 1px solid black;
+    }
+    header .seila {
+        grid-area: B;
+        border: 1px solid black;
+    }
+    
+}
