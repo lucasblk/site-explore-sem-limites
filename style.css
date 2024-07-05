@@ -25,7 +25,7 @@ header {
     
 }
 
-.app header .seila {
+.app header .container {
     grid-area: B;
     text-align: center;
     padding-bottom: 30px;
@@ -44,6 +44,12 @@ header {
 }
 
 main {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
     background-color: #343193;
     padding-top: 5px;
     padding-bottom: 10px;
@@ -51,24 +57,22 @@ main {
 }
 
 main .planets {
-    margin: auto;
-    padding-top: 26px;
-    padding-left: 26px;
-    margin-block: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 350px;
+    max-height: 330px;
+    padding: 16px;
     background-color: white;
     border-radius: 20px;
-    width: 350px;
 }
 main .planets img {
     padding-bottom: 15px;
 }
-main .planets .planets-description p{
-    width: 265px;
-    height: 170px;
+main .planets p {
     text-align: left;
     font-weight: 600;
 }
-main .planets .planets-description h2 {
+main .planets h2 {
     color: #B52184;
     font-weight: 900;
 
@@ -122,26 +126,49 @@ footer p {
     padding: 30px 0px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
+    
     header {
-        height: 700px;
+        display: flex;
+        gap: 0;
+        padding: 0px 20px 0px 100px;
+        height: 100%;
+        align-items:end;
+        
+    }   
+    .container {
+        max-width: 900px;
+        margin: auto;
         display: grid;
-        grid-template-areas: 
-        "B A"
-        ;
-        gap: 10px;
-        align-content: space-between;
-        justify-content: start;
-        align-items: end;
+        gap: 20px;
+        justify-items: start;
+        
     }
-    header .astro {
-        grid-area: A;
-        max-width: 700px;
-        border: 1px solid black;
+    .arrow {
+        width: 40px;
     }
-    header .seila {
-        grid-area: B;
-        border: 1px solid black;
+    .texto {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        text-align: center;
+        
+    }
+    .astro {
+        margin: 0;
+        padding-bottom: 50px;
+        min-width: 500px;
     }
     
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items:normal;
+        gap: 30px;
+    }
+    
+    .planets {
+        
+        width: 300px;
+
+    }
 }
