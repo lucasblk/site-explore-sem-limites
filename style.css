@@ -146,6 +146,7 @@ footer {
 footer p {
     color: white;
     padding: 30px 0px;
+    text-align: center;
 }
 
 @media (min-width: 900px) {
@@ -216,7 +217,5 @@ footer p {
         width: fit-content; 
     }
 
-    footer {
-        text-align: center;
-    }
+    
 }
